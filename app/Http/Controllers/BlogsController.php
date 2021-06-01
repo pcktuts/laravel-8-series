@@ -14,7 +14,17 @@ class BlogsController extends Controller
     public function index()
     {
         //
-        return "This is list of blogs!";
+        $posts = [
+            [
+                'title' => "This is my first post",
+                'content' => "dummy contents,"
+            ],
+            [
+                'title' => "This is my second post",
+                'content' => "dummy contents 2,"
+            ]
+            ];
+        return view('blogs.index', ['posts' => $posts]);
     }
 
     /**
